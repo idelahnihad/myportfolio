@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="450" viewBox="0 0 800 450">
+  <!-- Project image: Enterprise Database System — SQL schema/query mockup -->
+  <defs>
+    <linearGradient id="bg2" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#082f49"/>
+      <stop offset="100%" stop-color="#1e1b4b"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="450" fill="url(#bg2)"/>
+  <!-- Editor window -->
+  <rect x="60" y="40" width="460" height="370" rx="12" fill="#0f172a" stroke="#334155" stroke-width="2"/>
+  <rect x="60" y="40" width="460" height="40" rx="12" fill="#1e293b"/>
+  <text x="290" y="66" text-anchor="middle" font-family="system-ui, sans-serif" font-size="15" fill="#7dd3fc" font-weight="600">enterprise_schema.sql</text>
+  <!-- SQL code lines -->
+  <text x="85" y="120" font-family="monospace" font-size="15" fill="#c084fc">CREATE TABLE</text>
+  <text x="215" y="120" font-family="monospace" font-size="15" fill="#e2e8f0"> employees (</text>
+  <text x="100" y="148" font-family="monospace" font-size="15" fill="#7dd3fc">emp_id</text>
+  <text x="175" y="148" font-family="monospace" font-size="15" fill="#fbbf24"> INT PRIMARY KEY,</text>
+  <text x="100" y="176" font-family="monospace" font-size="15" fill="#7dd3fc">dept_id</text>
+  <text x="180" y="176" font-family="monospace" font-size="15" fill="#fbbf24"> INT REFERENCES departments,</text>
+  <text x="100" y="204" font-family="monospace" font-size="15" fill="#7dd3fc">salary</text>
+  <text x="168" y="204" font-family="monospace" font-size="15" fill="#fbbf24"> DECIMAL(10,2) NOT NULL</text>
+  <text x="85" y="232" font-family="monospace" font-size="15" fill="#e2e8f0">);</text>
+  <text x="85" y="272" font-family="monospace" font-size="15" fill="#c084fc">SELECT</text>
+  <text x="150" y="272" font-family="monospace" font-size="15" fill="#e2e8f0"> d.name, AVG(e.salary)</text>
+  <text x="85" y="300" font-family="monospace" font-size="15" fill="#c084fc">FROM</text>
+  <text x="140" y="300" font-family="monospace" font-size="15" fill="#e2e8f0"> departments d</text>
+  <text x="85" y="328" font-family="monospace" font-size="15" fill="#c084fc">JOIN</text>
+  <text x="135" y="328" font-family="monospace" font-size="15" fill="#e2e8f0"> employees e USING (dept_id)</text>
+  <text x="85" y="356" font-family="monospace" font-size="15" fill="#c084fc">GROUP BY</text>
+  <text x="180" y="356" font-family="monospace" font-size="15" fill="#e2e8f0"> d.name;</text>
+  <!-- ER diagram side panel -->
+  <rect x="560" y="40" width="180" height="370" rx="12" fill="#0f172a" stroke="#334155" stroke-width="2"/>
+  <text x="650" y="76" text-anchor="middle" font-family="system-ui, sans-serif" font-size="14" fill="#7dd3fc" font-weight="600">ER Model</text>
+  <rect x="590" y="100" width="120" height="46" rx="6" fill="#1e3a8a"/>
+  <text x="650" y="128" text-anchor="middle" font-family="system-ui, sans-serif" font-size="13" fill="#ffffff">DEPARTMENTS</text>
+  <rect x="590" y="210" width="120" height="46" rx="6" fill="#1e3a8a"/>
+  <text x="650" y="238" text-anchor="middle" font-family="system-ui, sans-serif" font-size="13" fill="#ffffff">EMPLOYEES</text>
+  <rect x="590" y="320" width="120" height="46" rx="6" fill="#1e3a8a"/>
+  <text x="650" y="348" text-anchor="middle" font-family="system-ui, sans-serif" font-size="13" fill="#ffffff">PROJECTS</text>
+  <line x1="650" y1="146" x2="650" y2="210" stroke="#fbbf24" stroke-width="2"/>
+  <line x1="650" y1="256" x2="650" y2="320" stroke="#fbbf24" stroke-width="2"/>
+  <text x="662" y="182" font-family="system-ui, sans-serif" font-size="12" fill="#fbbf24">1 : N</text>
+  <text x="662" y="292" font-family="system-ui, sans-serif" font-size="12" fill="#fbbf24">M : N</text>
+</svg>
